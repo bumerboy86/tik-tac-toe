@@ -4,6 +4,8 @@ import { Tabs } from './components/Tabs/Tabs';
 import { Backdrop } from './components/Bacdrop/Backdrop';
 import { ITabsItem } from './interfaces/ITabsItem';
 import { IWinner } from './interfaces/IWinner';
+import { ButtonCustom } from './components/UI/ButtonCustom/ButtonCustom';
+import { EButton } from './enums/EButton';
 
 const App = () => {
   const initialMovie: Number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8];
@@ -44,7 +46,7 @@ const App = () => {
   const checkWin = useCallback((arr: {id: number, val: string}[], text: string) => {
     for (let i = 0; i < winArr.length; i++) {
         if (arr[winArr[i].a].val === text && arr[winArr[i].b].val === text && arr[winArr[i].c].val === text) {
-         setWin({winner: text === 'x' ? 'Human win!!!' : 'CPU win!!!', winning: true});
+         setWin({winner: text === 'x' ? 'You win!!!' : 'CPU win!!!', winning: true});
          return true;
         }
     }
@@ -101,7 +103,7 @@ const App = () => {
       {win.winning && <Backdrop fn={() =>  setWin(prev => ({...prev, winning: false}))} data={win.winner}/>}
       <div className={styles.container}>
         <div className={styles.btnBox}>
-            <button className={`${styles.clear} ${styles.btn}`} onClick={clearHandler}>Старт</button>
+            <ButtonCustom fn={clearHandler} name='Refresh' type={EButton.clear} />
         </div>
         <div id={styles.place}>
             {tabsArr.length && tabsArr.map(item => <Tabs key={item.id} data={item.val} fn={() => tikHandler({id: item.id, val: 'x' })} />

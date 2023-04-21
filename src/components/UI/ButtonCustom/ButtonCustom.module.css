@@ -1,0 +1,20 @@
+.btn {
+    padding: 15px 45px;
+    margin: 5px;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    background: black;
+    box-shadow: inset 5px 5px 5px rgb(255, 255, 255);
+  }
+  
+.btn:active {
+    background: orange;
+    border: 2px solid orange;
+    color: black;
+}
+
+.btn:hover {
+  background: rgb(70, 69, 69);
+}

@@ -1,5 +1,6 @@
 import styles from './Backdrop.module.css';
-import btnStyle from '../../App.module.css';
+import { ButtonCustom } from '../UI/ButtonCustom/ButtonCustom';
+import { EButton } from '../../enums/EButton';
 
 type textBackdrop = {
     data: string,
@@ -12,7 +13,7 @@ export const Backdrop = (props: textBackdrop) => {
     <div className={styles.backdrop}></div>
     <div className={styles.myAlert}>
         <p className={styles.myAlert_text}>{props.data}</p>
-        <button onClick={() => props.fn()} className={btnStyle.btn}>Ok</button>
+        <ButtonCustom fn={() => props.fn()} name='ok' type={EButton.normal}/>
     </div>
     </>
   )
