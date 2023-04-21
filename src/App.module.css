@@ -1,0 +1,65 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.btnBox {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: orange;
+  align-items: flex-end;
+  border: 5px solid black;
+  border-bottom: none;
+  box-sizing: border-box;
+  border-radius: 20px 20px 0 0;
+}
+
+#place {
+  padding: 0;
+  display: flex;
+  padding:  10px 20%;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  border: 5px solid black;
+  background: orange;
+  border-radius: 0 0 20px 20px;
+}
+
+.btn {
+  padding: 15px 45px;
+  margin: 5px;
+  border-radius: 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  background: black;
+  box-shadow: inset 5px 5px 5px rgb(255, 255, 255);
+}
+
+.btn:active {
+  /* margin: 10px; */
+  background: orange;
+  border: 2px solid orange;
+  color: black;
+}
+
+/* .clear {
+  padding: 15px 45px;
+}
+
+.clear:active {
+  padding: 15px 45px;
+  background: orange;
+  border: 2px solid orange;
+  margin: 5px;
+  color: black;
+} */
