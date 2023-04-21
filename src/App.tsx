@@ -97,7 +97,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className={styles.App}>
       {win.winning && <Backdrop fn={() =>  setWin(prev => ({...prev, winning: false}))} data={win.winner}/>}
       <div className={styles.container}>
         <div className={styles.btnBox}>

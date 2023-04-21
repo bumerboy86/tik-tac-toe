@@ -1,6 +1,11 @@
+.App {
+  position: relative;
+}
+
 .container {
-  max-width: 1200px;
+  max-width: 800px;
   width: 100%;
+  height: 100vh;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -46,20 +51,7 @@
 }
 
 .btn:active {
-  /* margin: 10px; */
   background: orange;
   border: 2px solid orange;
   color: black;
 }
-
-/* .clear {
-  padding: 15px 45px;
-}
-
-.clear:active {
-  padding: 15px 45px;
-  background: orange;
-  border: 2px solid orange;
-  margin: 5px;
-  color: black;
-} */
